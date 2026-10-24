@@ -1,0 +1,42 @@
+{
+  "name": "library-api",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@10.34.8",
+  "scripts": {
+    "dev": "next dev --turbopack",
+    "dev:lan": "next dev -H 0.0.0.0",
+    "build": "next build --turbopack",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "next typegen && tsc --noEmit",
+    "test": "vitest run",
+    "seed": "tsx --env-file=.env scripts/seed.mts",
+    "set-role": "tsx --env-file=.env scripts/set-role.mts",
+    "create-user": "tsx --env-file=.env scripts/create-user.mts",
+    "smoke": "tsx --env-file=.env scripts/smoke.mts",
+    "reset-demo": "tsx --env-file=.env scripts/reset-demo.mts"
+  },
+  "dependencies": {
+    "firebase-admin": "^13.10.0",
+    "next": "^16.4.3",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "server-only": "^0.0.1",
+    "sharp": "^0.35.5",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@seriousme/openapi-schema-validator": "^2.11.0",
+    "@tailwindcss/postcss": "^4.3.3",
+    "@types/node": "^24.10.0",
+    "@types/react": "^19.2.0",
+    "@types/react-dom": "^19.2.0",
+    "eslint": "^9.39.2",
+    "eslint-config-next": "^16.4.3",
+    "tailwindcss": "^4.3.3",
+    "tsx": "^4.23.15",
+    "typescript": "^5.9.3",
+    "vitest": "^5.0.5"
+  }
+}
